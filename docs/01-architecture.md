@@ -65,7 +65,7 @@ flowchart LR
   W["file write"] --> P{"inside the<br/>package?"}
   P -->|no| OK1["pass"]
   P -->|yes| A["parse to AST"]
-  A --> R["resolve relative imports<br/>expand <code>from pkg import sub</code>"]
+  A --> R["resolve relative imports<br/>expand from pkg import sub"]
   R --> M{"matches a<br/>boundary rule?"}
   M -->|no| OK2["pass"]
   M -->|yes| BLOCK["block the write<br/>· name the rule ·"]
@@ -110,3 +110,4 @@ the person deploying.
 
 **Related:** [ADR-0001](adr/0001-layering-and-registry.md) ·
 [ADR-0002](adr/0002-enforce-boundaries-with-a-hook.md)
+

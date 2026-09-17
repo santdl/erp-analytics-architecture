@@ -35,7 +35,7 @@ flowchart LR
     EXT["Extractor<br/>column contract · SHA-256"]
     CNV["Converter<br/>typed, fail-fast"]
   end
-  subgraph db[("PostgreSQL")]
+  subgraph db["PostgreSQL"]
     RAW["raw<br/>typed 1:1 copy<br/>+ load ledger"]
     CORE["core<br/>star schema<br/>rebuilt every load"]
     PLAT["platform<br/>users · grants · scopes"]
@@ -110,3 +110,4 @@ Start with [Architecture and boundaries](docs/01-architecture.md) for the shape,
 
 *Generalized throughout: no employer, no hostnames, no data. The reasoning is the portable part.*
 [MIT](LICENSE).
+
